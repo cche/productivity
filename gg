@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+gdirs=$(for i in `ls -d $HOME/src/gogs/* $HOME/src/github/*` ; do echo $(basename $(dirname $i))/$(basename $i); done)
+session_name=$(echo $gdirs | tr ' ' '\n' | fzf --reverse --header="Select git project >")
+path_name=$HOME/src/${session_name}
+session_name=${path_name//./_}
+echo session name is \"$session_name\"
+echo path name is $path_name
+
+if [ -z "$session_name" ]; then
+    # operation cancelled by user
+    exit 1
+fi
+
+cd $path_name && nvim .
