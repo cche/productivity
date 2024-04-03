@@ -12,4 +12,4 @@ if [ -z "$session_name" ]; then
 	exit 1
 fi
 
-cd "$path_name" && nvim
+cd "$path_name" && vim
