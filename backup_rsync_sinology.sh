@@ -34,6 +34,7 @@ if [[ $? -eq 0 ]]; then
         --exclude="perso" \
         --exclude="libraries" \
         --exclude="fastq" \
+        --exclude="bam" \
         --exclude="Downloads" \
       "/home/cristian/Documents /home/cristian/work" "$REMOTE_SERVER:/volume1/homes/cristian.chaparro/batudahue/$(date +%Y-%m-%d)"
 
