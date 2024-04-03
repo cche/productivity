@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp tgs gg ~/bin/
+cp tgs tg ~/bin/
 
